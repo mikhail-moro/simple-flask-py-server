@@ -4,11 +4,11 @@ from flask import Flask, request
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
-cors = CORS(app, resources = {r"/api/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 
 def getJsonData():
-    with open("data.json", "r", encoding = "utf8") as file:
+    with open("data.json", "r", encoding="utf8") as file:
         return json.load(file)
 
 
